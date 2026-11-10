@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Evidencias | Aplicaciones Web</title>
+    <!-- Script de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            min-height: 100vh;
+            color: #f8fafc;
+        }
+
+        /* Ambient Glow effect */
+        .glow-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Card Hover Animations */
+        .card-practice {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card-practice:hover {
+            transform: translateY(-6px);
+            border-color: rgba(129, 140, 248, 0.5);
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Pulse glow for status badge */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .pulse-dot {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="relative flex flex-col justify-between overflow-x-hidden">
+
+    <!-- Fondo resplandeciente sutil -->
+    <div class="glow-bg"></div>
+
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-10 max-w-7xl">
+
+        <!-- Header Principal -->
+        <header class="text-center mb-16 pt-6">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs sm:text-sm font-medium mb-4">
+                <i class="fa-solid fa-code"></i> Portafolio Académico Digital
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-indigo-300 mb-4">
+                Portafolio de Evidencias
+            </h1>
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-normal">
+                Colección de módulos, actividades y prácticas desarrolladas en el ámbito del desarrollo de aplicaciones web.
+            </p>
+        </header>
+
+        <!-- Contenedor de Módulos Principales -->
+        <main class="space-y-16">
+
+            <!-- BLOQUE 1: Construye Aplicaciones Web -->
+            <section>
+                <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-indigo-600/20 rounded-xl border border-indigo-500/30 text-indigo-400">
+                            <i class="fa-solid fa-laptop-code text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white">Construye Aplicaciones Web</h2>
+                            <p class="text-xs sm:text-sm text-slate-400">Prácticas interactiva de código HTML y Maquetación</p>
+                        </div>
+                    </div>
+                    <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span> 5 Prácticas activas
+                    </span>
+                </div>
+
+                <!-- Grid de tarjetas de prácticas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Práctica 1 -->
+                    <a href="practica1.html" class="card-practice group rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Práctica 01</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                                Práctica 1
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">
+                                Estructura básica en HTML, elementos principales y etiquetas fundamentales del documento.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>Archivo: <code class="text-indigo-400">practica1.html</code></span>
+                            <span class="font-medium text-indigo-300 group-hover:underline">Ver práctica &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Imagen -->
+                    <a href="imagen.html" class="card-practice group rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Multimedia</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                                Manejo de Imágenes
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">
+                                Inserción, atributos y optimización de recursos visuales en páginas web.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>Archivo: <code class="text-indigo-400">imagen.html</code></span>
+                            <span class="font-medium text-indigo-300 group-hover:underline">Ver práctica &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Práctica 2 -->
+                    <a href="practica2.html" class="card-practice group rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Práctica 02</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                                Práctica 2
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">
+                                Formularios, listas y diseño de hipervínculos estructurados.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>Archivo: <code class="text-indigo-400">practica2.html</code></span>
+                            <span class="font-medium text-indigo-300 group-hover:underline">Ver práctica &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Ejemplo 3 -->
+                    <a href="ejemplo3.html" class="card-practice group rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Ejemplo</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                                Ejemplo 3
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">
+                                Demostración interactiva de maquetación avanzada con tablas o contenedores.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>Archivo: <code class="text-indigo-400">ejemplo3.html</code></span>
+                            <span class="font-medium text-indigo-300 group-hover:underline">Ver práctica &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Blabla4 -->
+                    <a href="blabla4.html" class="card-practice group rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Práctica 04</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                                Blabla 4
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">
+                                Implementación de estilos CSS y hojas de diseño externas.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>Archivo: <code class="text-indigo-400">blabla4.html</code></span>
+                            <span class="font-medium text-indigo-300 group-hover:underline">Ver práctica &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- BLOQUE 2: Implementa Aplicaciones Web -->
+            <section>
+                <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-purple-600/20 rounded-xl border border-purple-500/30 text-purple-400">
+                            <i class="fa-solid fa-server text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white">Implementa Aplicaciones Web</h2>
+                            <p class="text-xs sm:text-sm text-slate-400">Servidores, despliegue, hosting y mantenimiento</p>
+                        </div>
+                    </div>
+                    <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                        <i class="fa-solid fa-clock text-xs"></i> Próximamente
+                    </span>
+                </div>
+
+                <!-- Espacio reservado para próximas prácticas -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Placeholder 1 -->
+                    <div class="rounded-2xl p-6 bg-slate-900/40 border border-dashed border-slate-800 flex flex-col justify-center items-center text-center group hover:border-purple-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cloud-arrow-up text-lg"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-300 mb-1">Publicación en Servidor Web</h3>
+                        <p class="text-xs text-slate-500 max-w-sm">Configuración de hosting, dominios y carga vía FTP / GitHub Pages.</p>
+                        <span class="mt-4 text-xs font-medium text-purple-400/70 bg-purple-500/5 px-3 py-1 rounded-full border border-purple-500/10">Espacio Reservado</span>
+                    </div>
+
+                    <!-- Placeholder 2 -->
+                    <div class="rounded-2xl p-6 bg-slate-900/40 border border-dashed border-slate-800 flex flex-col justify-center items-center text-center group hover:border-purple-500/40 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-database text-lg"></i>
+                        </div>
+                        <h3 class="text-base font-semibold text-slate-300 mb-1">Integración de Base de Datos y API</h3>
+                        <p class="text-xs text-slate-500 max-w-sm">Conexión con servicios backend y almacenamiento de datos.</p>
+                        <span class="mt-4 text-xs font-medium text-purple-400/70 bg-purple-500/5 px-3 py-1 rounded-full border border-purple-500/10">Espacio Reservado</span>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-20 pt-8 border-t border-slate-800 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
+            <div class="space-y-1">
+                <p class="font-medium text-slate-200">
+                    <i class="fa-solid fa-user-graduate text-indigo-400 mr-1.5"></i>
+                    <span>Luz Lugo</span>
+                </p>
+                <p class="text-xs text-slate-400">
+                    <i class="fa-solid fa-users text-purple-400 mr-1.5"></i>
+                    Grupo: <span>5CPM</span>
+                </p>
+            </div>
+            
+            <div class="text-xs text-slate-400 flex items-center gap-2">
+                <span>© 2026 Portafolio de Evidencias</span>
+                <span>•</span>
+                <span class="text-indigo-400">Todos los derechos reservados</span>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
